@@ -41,7 +41,7 @@
             </div>
             <div class="card " style="background-color: rgba(255, 255, 255, 0.1);">
               <div class="card-body p-5">
-                <form action="registration" method="post">
+                <form action="sample.jsp" method="post">
                   <div class="desc text-center">
                     <p>Sign up now to use our services!</p>
                   </div>
@@ -115,7 +115,7 @@ if (request.getMethod().equalsIgnoreCase("post")) {
         String dbPassword = "abcd1234";
         
         Connection con = DriverManager.getConnection(jdbcUrl, dbUsername, dbPassword);
-        String query = "INSERT INTO users (username, password, email, phone, birthday, gender) VALUES (?, ?, ?, ?, ?, ?)";
+        String query = "INSERT INTO users (name, password, email, phone, birthday, gender) VALUES (?, ?, ?, ?, ?, ?)";
         PreparedStatement ps = con.prepareStatement(query);
         ps.setString(1, username);
         ps.setString(2, password);
